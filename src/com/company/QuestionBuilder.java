@@ -15,7 +15,5 @@ public class QuestionBuilder {
         String userInputAnswerText = scan.nextLine();
 
         return new QuizQuestion(userInputQuestionText, userInputAnswerText);
-
     }
-
 }

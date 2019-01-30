@@ -12,20 +12,20 @@ public class QuestionBank {
 
     public QuestionBank(){
         questionBank = new ArrayList<>();
-    }
+        questionBank.add(new QuizQuestion("What's your name", "Brian"));
 
+    }
 
     public void addQuestion(QuizQuestion question){
         questionBank.add(question);
     }
-
 
     public ArrayList<QuizQuestion> createQuestionSet(){
 
         ArrayList<QuizQuestion> questionSet = new ArrayList<>();
 
         for(int i = 0; i < 5; i++ ){
-         QuizQuestion question = questionBank.get(random.nextInt(questionBank.size() + 1));
+         QuizQuestion question = questionBank.get(random.nextInt(questionBank.size()));
          questionSet.add(question);
         }
 

@@ -8,6 +8,7 @@ public class QuizDemo {
 
         UserMenu userMenu = new UserMenu();
         Scanner scan = new Scanner(System.in);
+        CreateNewQuestionHandler newQuestionHandler = new CreateNewQuestionHandler();
 
         final String takeQuiz = "1";
         final String addNewQuestion = "2";
@@ -35,7 +36,7 @@ public class QuizDemo {
          if (userInput.equals(takeQuiz)){
 
          } else if (userInput.equals(addNewQuestion)){
-
+             newQuestionHandler.createNewQuestion();
          } else if (userInput.equals(getDifferentQuestions)){
              quiz.getDifferentQuestions();
          } else if (userInput.equals(exitProgram)){
