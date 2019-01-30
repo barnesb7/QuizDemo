@@ -25,7 +25,23 @@ public class Quiz {
         questionBank.addQuestion(quizQuestion);
     }
 
+    public List<QuizQuestion> getQuizQuestionSet(){
+        return quizQuestionSet;
+    }
+
     public void printQuestionBank(){
         questionBank.print();
+    }
+
+    public void adjustScore(String adjustment){
+        if(adjustment.equals("increase")){
+            scoreKeeper.increaseScore();
+        } else if (adjustment.equals("decrease")){
+            scoreKeeper.decreaseScore();
+        }
+    }
+
+    public int getCurrentScore(){
+        return scoreKeeper.getQuizScore();
     }
 }

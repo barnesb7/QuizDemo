@@ -23,12 +23,18 @@ public class QuestionBank {
         System.out.println(questionBank);
     }
 
-
     public ArrayList<QuizQuestion> createQuestionSet(){
 
         ArrayList<QuizQuestion> questionSet = new ArrayList<>();
 
+        ArrayList<Integer> randomIndexesAlreadyCalled = new ArrayList<>();
+
         for(int i = 0; i < 5; i++ ){
+
+         int randomNumber = random.nextInt(questionBank.size());
+         randomIndexesAlreadyCalled.add(randomNumber);
+
+
          QuizQuestion question = questionBank.get(random.nextInt(questionBank.size()));
          questionSet.add(question);
         }

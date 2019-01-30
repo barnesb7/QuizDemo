@@ -18,15 +18,15 @@ public class QuizDemo {
         String userInput;
         boolean invalidInput = true;
         boolean wantsToContinue = true;
-
+        QuizRunner quizRunner;
         Quiz quiz;
 
 
         do{
-         do {
-             quiz = new Quiz();
-             userMenu.showMenu();
-             userInput =  scan.nextLine();
+            do {
+                quiz = new Quiz();
+                userMenu.showMenu();
+                userInput =  scan.nextLine();
 
              if(userInput.equals(takeQuiz) || userInput.equals(addNewQuestion) ||
                      userInput.equals(getDifferentQuestions) || userInput.equals(exitProgram)){
@@ -36,10 +36,9 @@ public class QuizDemo {
          } while (invalidInput);
 
 
-
-
          if (userInput.equals(takeQuiz)){
-
+             quizRunner = new QuizRunner(quiz);
+             quizRunner.takeCurrentQuiz();
          } else if (userInput.equals(addNewQuestion)){
              QuizQuestion newQuestion = newQuestionHandler.createNewQuestion();
              quiz.addToQuestionBank(newQuestion);
