@@ -38,7 +38,8 @@ public class QuizDemo {
          } else if (userInput.equals(getDifferentQuestions)){
 
          } else if (userInput.equals(exitProgram)){
-            
+            wantsToContinue = false;
+             System.out.println("Thank you. Goodbye");
          } else {
              System.out.println("Please choose a valid option from below");
          }
