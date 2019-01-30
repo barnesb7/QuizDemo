@@ -6,13 +6,13 @@ import java.util.Random;
 
 public class QuestionBank {
 
+    StandardQuestionLibrary standardQuestionLibrary = new StandardQuestionLibrary();
     Random random = new Random();
 
     List<QuizQuestion> questionBank;
 
     public QuestionBank(){
-        questionBank = new ArrayList<>();
-        questionBank.add(new QuizQuestion("What's your name", "Brian"));
+        questionBank = new ArrayList<>(standardQuestionLibrary.getLibraryAsQuizQuestions());
     }
 
     public void addQuestion(QuizQuestion question){

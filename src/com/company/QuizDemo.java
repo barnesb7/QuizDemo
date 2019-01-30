@@ -18,8 +18,13 @@ public class QuizDemo {
         String userInput;
         boolean invalidInput = true;
         boolean wantsToContinue = true;
-     do{
+
+        Quiz quiz;
+
+
+        do{
          do {
+             quiz = new Quiz();
              userMenu.showMenu();
              userInput =  scan.nextLine();
 
@@ -31,7 +36,7 @@ public class QuizDemo {
          } while (invalidInput);
 
 
-         Quiz quiz = new Quiz();
+
 
          if (userInput.equals(takeQuiz)){
 
