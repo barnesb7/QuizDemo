@@ -14,20 +14,37 @@ public class QuizDemo {
         final String getDifferentQuestions = "3";
         final String exitProgram = "4";
 
-        userMenu.showMenu();
-        String userInput =  scan.nextLine();
+        String userInput;
+        boolean invalidInput = true;
+        boolean wantsToContinue = true;
+     do{
+         do {
+             userMenu.showMenu();
+             userInput =  scan.nextLine();
 
-        if(userInput.equals(takeQuiz)){
+             if(userInput.equals(takeQuiz) || userInput.equals(addNewQuestion) ||
+                     userInput.equals(getDifferentQuestions) || userInput.equals(exitProgram)){
+                 invalidInput = false;
+             }
 
-        } else if (userInput.equals(addNewQuestion)){
+         } while (invalidInput);
 
-        } else if (userInput.equals(getDifferentQuestions)){
 
-        } else if (userInput.equals(exitProgram)){
 
-        } else {
+         if (userInput.equals(takeQuiz)){
 
-        }
+         } else if (userInput.equals(addNewQuestion)){
+
+         } else if (userInput.equals(getDifferentQuestions)){
+
+         } else if (userInput.equals(exitProgram)){
+            
+         } else {
+             System.out.println("Please choose a valid option from below");
+         }
+
+     } while(wantsToContinue);
+
 
 
     }
