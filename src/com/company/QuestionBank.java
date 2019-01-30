@@ -13,12 +13,16 @@ public class QuestionBank {
     public QuestionBank(){
         questionBank = new ArrayList<>();
         questionBank.add(new QuizQuestion("What's your name", "Brian"));
-
     }
 
     public void addQuestion(QuizQuestion question){
         questionBank.add(question);
     }
+
+    public void print(){
+        System.out.println(questionBank);
+    }
+
 
     public ArrayList<QuizQuestion> createQuestionSet(){
 

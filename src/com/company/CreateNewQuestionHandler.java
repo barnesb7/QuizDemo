@@ -5,11 +5,16 @@ public class CreateNewQuestionHandler {
     QuestionBuilder questionBuilder = new QuestionBuilder();
     StandardQuestionLibrary standardQuestionLibrary = new StandardQuestionLibrary();
 
-    public void createNewQuestion(){
+    public QuizQuestion createNewQuestion(){
        QuizQuestion newQuestion = questionBuilder.buildNewQuestion();
 
-       standardQuestionLibrary.addQuestion(newQuestion.getQuestionText(), newQuestion.getAnswer());
+       addQuestionToStandardQuestionLibrary(newQuestion);
 
+       return newQuestion;
+    }
+
+    private void addQuestionToStandardQuestionLibrary(QuizQuestion newQuestion){
+        standardQuestionLibrary.addQuestion(newQuestion.getQuestionText(), newQuestion.getAnswer());
     }
 
 }

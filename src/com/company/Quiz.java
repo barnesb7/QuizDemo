@@ -20,4 +20,12 @@ public class Quiz {
     public void getDifferentQuestions(){
         quizQuestionSet = questionBank.createQuestionSet();
     }
+
+    public void addToQuestionBank(QuizQuestion quizQuestion){
+        questionBank.addQuestion(quizQuestion);
+    }
+
+    public void printQuestionBank(){
+        questionBank.print();
+    }
 }

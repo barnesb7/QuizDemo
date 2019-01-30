@@ -36,7 +36,8 @@ public class QuizDemo {
          if (userInput.equals(takeQuiz)){
 
          } else if (userInput.equals(addNewQuestion)){
-             newQuestionHandler.createNewQuestion();
+             QuizQuestion newQuestion = newQuestionHandler.createNewQuestion();
+             quiz.addToQuestionBank(newQuestion);
          } else if (userInput.equals(getDifferentQuestions)){
              quiz.getDifferentQuestions();
          } else if (userInput.equals(exitProgram)){
