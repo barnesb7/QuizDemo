@@ -30,13 +30,14 @@ public class QuizDemo {
          } while (invalidInput);
 
 
+         Quiz quiz = new Quiz();
 
          if (userInput.equals(takeQuiz)){
 
          } else if (userInput.equals(addNewQuestion)){
 
          } else if (userInput.equals(getDifferentQuestions)){
-
+             quiz.getDifferentQuestions();
          } else if (userInput.equals(exitProgram)){
             wantsToContinue = false;
              System.out.println("Thank you. Goodbye");

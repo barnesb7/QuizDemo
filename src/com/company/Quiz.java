@@ -16,4 +16,8 @@ public class Quiz {
         this.quizQuestionSet = new ArrayList(questionSet);
         this.scoreKeeper = new ScoreKeeper();
     }
+
+    public void getDifferentQuestions(){
+        quizQuestionSet = questionBank.createQuestionSet();
+    }
 }
