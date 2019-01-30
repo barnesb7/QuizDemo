@@ -19,6 +19,7 @@ public class QuestionBank {
         questionBank.add(question);
     }
 
+
     public ArrayList<QuizQuestion> createQuestionSet(){
 
         ArrayList<QuizQuestion> questionSet = new ArrayList<>();
@@ -27,7 +28,6 @@ public class QuestionBank {
          QuizQuestion question = questionBank.get(random.nextInt(questionBank.size() + 1));
          questionSet.add(question);
         }
-
 
         return questionSet;
     }
